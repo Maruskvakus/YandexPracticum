@@ -1,5 +1,5 @@
 import psycopg2
-from config import config
+from YandexPracticum.config import config
 
 
 def create_tables():
@@ -8,7 +8,7 @@ def create_tables():
                 base_currency TEXT NOT NULL,
                 target_currency TEXT NOT NULL,
                 rate NUMERIC,
-                rate_date DATE, 
+                rate_date DATE,
                 etl_modified_date TIMESTAMP,
                 PRIMARY KEY (rate_date, etl_modified_date))"""
     conn = None
@@ -29,7 +29,3 @@ def create_tables():
     finally:
         if conn is not None:
             conn.close()
-
-
-if __name__ == '__main__':
-    create_tables()

@@ -1,5 +1,5 @@
 import psycopg2
-from config import config
+from YandexPracticum.config import config
 
 
 def connect():

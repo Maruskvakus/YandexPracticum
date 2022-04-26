@@ -34,7 +34,7 @@ def check_table():
             conn.close()
 
 
-def fetch_data(base, target, fetch_url, param) -> object:
+def fetch_data(base, target, fetch_url, param):
     response = requests.get(fetch_url, params=param)
     data = response.json()
 
