@@ -1,5 +1,5 @@
 import psycopg2
-from YandexPracticum.config import config
+from config import config
 
 
 def create_tables():

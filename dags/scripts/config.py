@@ -2,7 +2,7 @@ from configparser import ConfigParser
 from airflow.exceptions import AirflowFailException
 
 
-def config(filename='/opt/airflow/dags/YandexPracticum/database.ini', section='postgresql'):
+def config(filename='/opt/airflow/dags/scripts/database.ini', section='postgresql'):
     # create a parser
     parser = ConfigParser()
     # read config file
