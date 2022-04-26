@@ -20,13 +20,13 @@ with DAG(
     schedule_interval=timedelta(hours=3),
     start_date=datetime(2021, 1, 1),
     catchup=False,
-    template_searchpath=["${AIRFLOW_HOME}/dags/YandexPracticum"]
+    template_searchpath=["${AIRFLOW_HOME}/dags/scripts"]
 ) as dag:
 
     # t1, t2 and t3 are examples of tasks created by instantiating operators
     t1 = BashOperator(
         task_id = 'test',
-        bash_command = "python3 ${AIRFLOW_HOME}/dags/YandexPracticum/insert.py",
+        bash_command = "python3 ${AIRFLOW_HOME}/dags/scripts/insert.py",
         )
 
 
